@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/clearable_edittext_background">
+
+    <EditText
+        android:id="@+id/edittext"
+        style="@style/ClearableEditTextWidget"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/clear_icon"
+        android:layout_toStartOf="@+id/clear_icon"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:textSize="@dimen/textSize_large" />
+
+    <ImageView
+        android:id="@id/clear_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:alpha="@dimen/disabled_clear_button_alpha"
+        android:background="@color/clearable_edittext_clear_icon_background"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        tools:alpha="@dimen/enabled_clear_button_alpha" />
+
+</RelativeLayout>

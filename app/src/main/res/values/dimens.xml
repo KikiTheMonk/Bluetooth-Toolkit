@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- generic -->
+    <dimen name="height_divider">2dp</dimen>
+
+    <dimen name="margin_very_small">3dp</dimen>
+    <dimen name="margin_small">5dp</dimen>
+    <dimen name="margin_medium">10dp</dimen>
+    <dimen name="margin_large">20dp</dimen>
+
+    <dimen name="textSize_x_small">12sp</dimen>
+    <dimen name="textSize_very_small">14sp</dimen>
+    <dimen name="textSize_small">16sp</dimen>
+    <dimen name="textSize_medium">18sp</dimen>
+    <dimen name="textSize_large">20sp</dimen>
+    <dimen name="textSize_very_large">22sp</dimen>
+    <dimen name="textSize_x_large">24sp</dimen>
+    <dimen name="textSize_xx_large">26sp</dimen>
+    <dimen name="textSize_xxx_large">28sp</dimen>
+    <dimen name="textSize_gigantic">45sp</dimen>
+
+    <dimen name="box_very_small">25dp</dimen>
+    <dimen name="box_small">50dp</dimen>
+    <dimen name="box_medium">100dp</dimen>
+    <dimen name="box_large">150dp</dimen>
+
+    <!-- header -->
+    <dimen name="header_divider_margin">@dimen/margin_very_small</dimen>
+    <dimen name="header_margin">@dimen/margin_very_small</dimen>
+    <dimen name="header_divider_height">@dimen/height_divider</dimen>
+    <dimen name="header_height">40dp</dimen>
+
+    <dimen name="home_icon_size">@dimen/box_medium</dimen>
+
+</resources>

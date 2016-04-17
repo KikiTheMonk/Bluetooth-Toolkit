@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_container"
+    style="@style/ScreenContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+    <TextView
+        android:id="@+id/is_bt_classic_supported_label"
+        style="@style/Text.Content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        tools:background="@android:color/holo_green_dark"
+        tools:text="@string/label_bt_classic_mode_supported" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/primary_dark" />
+
+    <TextView
+        android:id="@+id/is_central_supported_label"
+        style="@style/Text.Content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        tools:background="@android:color/holo_green_dark"
+        tools:text="@string/label_central_mode_supported" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/primary_dark" />
+
+    <TextView
+        android:id="@+id/is_peripheral_supported_label"
+        style="@style/Text.Content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        tools:background="@android:color/holo_red_dark"
+        tools:text="@string/label_peripheral_mode_not_supported" />
+
+    <!--
+        <LinearLayout
+            android:id="@+id/bt_classic_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="0.33"
+            android:gravity="center"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/central_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="0.33"
+            android:gravity="center"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/peripheral_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="0.33"
+            android:gravity="center"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ad_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    -->
+</LinearLayout>

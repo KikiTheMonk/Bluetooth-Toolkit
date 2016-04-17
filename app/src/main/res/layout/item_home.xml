@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin_very_small"
+    tools:background="@drawable/border_orange">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/left_icon"
+            android:layout_width="@dimen/home_icon_size"
+            android:layout_height="@dimen/home_icon_size"
+            android:background="@drawable/selector_bt_functionality"
+            android:contentDescription="@string/img_content_description"
+            tools:src="@drawable/ic_bpm" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/short_name_label"
+            style="@style/Text.Title.Bold.Black.HomeItemLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/bpm_abbreviation" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/margin_very_small"
+            android:paddingLeft="@dimen/margin_very_small"
+            android:paddingRight="@dimen/margin_very_small"
+            android:paddingStart="@dimen/margin_very_small">
+
+            <TextView
+                android:id="@+id/full_name_label"
+                style="@style/Text.Content.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                tools:text="@string/title_activity_bpm" />
+
+            <TextView
+                android:id="@+id/bt_type"
+                style="@style/Text.Content.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                tools:text="@string/bt_type" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/right_icon"
+            android:layout_width="@dimen/home_icon_size"
+            android:layout_height="@dimen/home_icon_size"
+            android:background="@drawable/selector_bt_functionality"
+            android:contentDescription="@string/img_content_description"
+            tools:src="@drawable/ic_multiple_bpm" />
+    </LinearLayout>
+
+</LinearLayout>

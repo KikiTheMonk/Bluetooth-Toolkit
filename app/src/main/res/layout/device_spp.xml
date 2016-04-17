@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ScreenContainer"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_small">
+
+    <TextView
+        android:id="@+id/labelConsoleOutputTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/console"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:id="@+id/scrollViewConsoleOutput"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/border_orange">
+
+        <TextView
+            android:id="@+id/valueConsoleOutputTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textIsSelectable="true"
+            android:textSize="20sp" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/containerInputAndSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <com.kyriakosalexandrou.bluetoothtoolkit.ui.components.ClearableEditTextComponent
+            android:id="@+id/inputBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/btn_send"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/containerCounters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/labelRxCounterTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/label_rx"
+            android:textColor="#00a0df" />
+
+        <TextView
+            android:id="@+id/valueRxCounterTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/labelRxCounterTv"
+            android:layout_toRightOf="@id/labelRxCounterTv"
+            android:text="@string/non_applicable"
+            android:textColor="#00a0df" />
+
+        <TextView
+            android:id="@+id/labelTxCounterTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/valueRxCounterTv"
+            android:layout_toRightOf="@id/valueRxCounterTv"
+            android:text="@string/label_tx"
+            android:textColor="#00a0df" />
+
+        <TextView
+            android:id="@+id/valueTxCounterTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/labelTxCounterTv"
+            android:layout_toRightOf="@id/labelTxCounterTv"
+            android:text="@string/non_applicable"
+            android:textColor="#00a0df" />
+    </RelativeLayout>
+
+</LinearLayout>

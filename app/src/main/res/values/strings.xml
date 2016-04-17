@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="app_name">Bluetooth Toolkit</string>
+    <string name="version_number">Version 0.9</string>
+
+    <!-- screens titles -->
+    <string name="title_activity_settings">@string/settings</string>
+    <string name="title_activity_htm">Health Thermometer</string>
+    <string name="title_activity_hrm">Heart Rate</string>
+    <string name="title_activity_bpm">Blood Pressure</string>
+    <string name="title_activity_spp">Serial Port Profile</string>
+    <string name="title_activity_multiple_hrm_devices">Multiple Heart Rate</string>
+    <string name="title_activity_multiple_htm_devices">Multiple Health Thermometer</string>
+    <string name="title_activity_multiple_bpm_devices">Multiple Blood Pressure</string>
+
+    <!-- General -->
+    <string name="btn_scan">@string/scan</string>
+    <string name="btn_connecting">@string/connecting</string>
+    <string name="btn_disconnect">@string/disconnect</string>
+    <string name="label_valid_device_label">VSP Service Found:</string>
+
+    <!-- General Settings -->
+    <string name="action_about">@string/about</string>
+    <string name="action_settings">@string/settings</string>
+    <string name="pref_general">@string/general</string>
+    <string name="pref_title_run_in_background">Run In Background</string>
+    <string name="pref_summary_run_in_background">Keep the app running in the background</string>
+    <string name="pref_title_periodical_scan">Periodical Scan</string>
+    <string name="pref_summary_periodical_scan">Periodically reset the ble scan so that some devices can update the RSSI (Nexus 7, etc.)</string>
+
+    <!-- device details -->
+    <string name="label_device_details">Device Details</string>
+    <string name="device_name_label">Name: </string>
+    <string name="device_address_label">Address: </string>
+    <string name="device_rssi_label">RSSI: </string>
+    <string name="device_battery_label">Battery: </string>
+
+    <!-- Home Activity -->
+    <string name="disclaimer_text"><![CDATA[
+    Test app for BT Classic and BLE functionalities (Work in progress)
+    <br/><br/>
+    Developed by <a href="https://uk.linkedin.com/in/kyriakosalexandrou">Kyriakos alexandrou</a>
+    <br/><br/>
+    My <a href="https://play.google.com/store/apps/developer?id=Kyriakos+Alexandrou">Playstore</a> account
+    ]]></string>
+
+    <!-- heart rate -->
+    <string name="label_hrm">HRM</string>
+    <string name="beats_per_minute">BPM</string>
+    <string name="heartRateTV">Heart Rate Device</string>
+    <string name="label_pulse">Pulse: </string>
+    <string name="label_bodysensor">Body Sensor: </string>
+    <string name="about_heart_rate">
+        Scan and connect to a BLE device running a Heart rate monitor app.
+        Once connected the sensor data and position will be displayed and plotted on the graph</string>
+    <string name="about_multiple_heart_rate">
+        Scan and connect to multiple BLE HR devices
+	</string>
+    <string name="action_multiple_heartrate">Multiple Heart rates</string>
+
+    <!-- Thermometer -->
+    <string name="label_htm">HTM</string>
+    <string name="about_thermometer">
+        Scan and connect to a BLE device running a Health thermometer app.
+        Once connected the sensor data will be displayed and plotted on the graph
+    </string>
+    <string name="about_multiple_thermometer">
+         Scan and connect to multiple BLE thermometer devices
+	</string>
+    <string name="action_multiple_thermometer">Multiple Health Thermometers</string>
+
+    <!-- blood pressure -->
+    <string name="bpm_abbreviation">BPM</string>
+    <string name="bpm_full_name">Blood Pressure Measurement</string>
+    <string name="label_systolic">Systolic:</string>
+    <string name="label_diastolic">Diastolic:</string>
+    <string name="label_arterial_pressure">Arterial Pressure: </string>
+    <string name="about_blood_pressure">
+        Scan and connect to a BLE device running a Blood pressure monitor app.
+        Once connected the sensor data will be displayed and plotted on the graph
+    </string>
+    <string name="about_multiple_bloodpressure">
+        Scan and connect to multiple BLE blood pressure devices.
+	</string>
+    <string name="action_multiple_bloodpressure">Multiple Blood Pressures</string>
+
+    <!-- SPP -->
+    <string name="label_spp">SPP</string>
+    <string name="pref_spp">@string/label_spp</string>
+    <string name="action_clear">@string/clear</string>
+    <string name="btn_send">@string/send</string>
+    <string name="label_rx">Rx:</string>
+    <string name="label_tx">Tx:</string>
+    <string name="send_cr">Send CR</string>
+    <string name="pref_clear_text_after_sending">Clear text after sending</string>
+    <string name="about_spp">        The SPP functionality allows text data to be sent using BT Classic from an Android
+        device to a module that is in SPP mode and back again
+</string>
+
+    <string name="img_content_description">image</string>
+    <string name="icon_header_contentDescription">@string/img_content_description</string>
+    <string name="permission_access_coarse_location_msg">You need to allow access to \'Access Coarse Location\' for BLE</string>
+    <string name="db">" db"</string>
+    <string name="percentage">%</string>
+    <string name="celsius_unit">" C"</string>
+    <string name="unknown_device">Unknown Device</string>
+    <string name="label_peripheral_mode_not_supported">Peripheral not supported</string>
+    <string name="label_peripheral_mode_supported">Peripheral supported</string>
+    <string name="label_central_mode_not_supported">Central not supported</string>
+    <string name="label_central_mode_supported">Central supported</string>
+    <string name="label_bt_classic_mode_not_supported">BT classic not supported</string>
+    <string name="label_bt_classic_mode_supported">BT classic supported</string>
+    <string name="bt_classic">BT Classic</string>
+    <string name="wait_for_connection">Wait for connection!</string>
+    <string name="bt_not_enabled">Bluetooth must be on to start scanning.</string>
+    <string name="battery_unit">%</string>
+    <string name="rssi_unit">db</string>
+    <string name="blood_pressure">Blood Pressure</string>
+    <string name="thermometer">Thermometer</string>
+    <string name="characteristic_not_found">characteristic was not found</string>
+    <string name="gps_not_enabled">GPS must be enabled for BLE scanning to work</string>
+    <string name="gps_needs_to_be_enabled">GPS needs to be enabled for BLE to work correctly</string>
+    <string name="not_supported">Not Supported on this device</string>
+
+    <string name="bt_type">Type: %1$s</string>
+
+</resources>

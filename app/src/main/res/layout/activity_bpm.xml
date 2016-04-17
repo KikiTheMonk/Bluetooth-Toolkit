@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ScreenContainer">
+
+    <com.kyriakosalexandrou.bluetoothtoolkit.ui.components.CommonBleDevicePropertiesDetailsComponent
+        android:id="@+id/common_ble_properties_component"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/chart_layout"
+        style="@style/ChartLayout"
+        android:layout_above="@+id/values_container"
+        android:layout_below="@id/common_ble_properties_component" />
+
+    <LinearLayout
+        android:id="@+id/values_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_scan"
+        android:orientation="vertical">
+
+        <ImageView style="@style/Divider.Horizontal" />
+
+        <include
+            layout="@layout/include_device_bpm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView style="@style/Divider.Horizontal" />
+
+    </LinearLayout>
+
+    <Button
+        style="@style/Btn.Scan"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

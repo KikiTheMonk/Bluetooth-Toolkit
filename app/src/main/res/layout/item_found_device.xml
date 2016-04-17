@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TableRow
+        android:id="@+id/row_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/device_name_Item_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="0"
+            android:text="@string/device_name_label"
+            android:textSize="@dimen/textSize_x_large" />
+
+        <TextView
+            android:id="@+id/device_name_item_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="999"
+            android:ellipsize="end"
+            android:textSize="@dimen/textSize_x_large"
+            android:textStyle="bold"
+            tools:text="name value" />
+
+        <TextView
+            android:id="@+id/device_rssi_item_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="0"
+            android:text="@string/device_rssi_label"
+            android:textSize="@dimen/textSize_medium" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/row_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/device_address_item_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="0"
+            android:text="@string/device_address_label"
+            android:textSize="@dimen/textSize_x_small" />
+
+        <TextView
+            android:id="@+id/device_address_item_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="999"
+            android:ellipsize="end"
+            android:textSize="@dimen/textSize_x_small"
+            android:textStyle="italic"
+            tools:text="address value" />
+
+        <TextView
+            android:id="@+id/device_rssi_Item_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0"
+            android:textSize="@dimen/textSize_x_small"
+            tools:text="45" />
+    </TableRow>
+
+</TableLayout>

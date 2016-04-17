@@ -1,0 +1,4 @@
+<resources>
+    <item name="enabled_clear_button_alpha" format="float" type="dimen">1</item>
+    <item name="disabled_clear_button_alpha" format="float" type="dimen">0</item>
+</resources>

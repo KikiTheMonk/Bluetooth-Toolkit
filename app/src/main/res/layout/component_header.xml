@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme.Dialog">
+
+    <RelativeLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:padding="@dimen/margin_small">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/icon_header_contentDescription"
+            tools:src="@drawable/ic_bpm" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Text.Title.Bold.Header.Dialog.Black"
+            android:layout_width="match_parent"
+            android:layout_toEndOf="@id/icon"
+            android:layout_toLeftOf="@+id/progress_indicator"
+            android:layout_toRightOf="@id/icon"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_toStartOf="@+id/progress_indicator"
+            tools:text="Title" />
+
+        <ProgressBar
+            android:id="@id/progress_indicator"
+            style="@android:style/Widget.ProgressBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </RelativeLayout>
+
+    <View style="@style/Divider.Horizontal" />
+
+</LinearLayout>

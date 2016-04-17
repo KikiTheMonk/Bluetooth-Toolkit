@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/SpecificBleDeviceValuesContainer">
+
+    <TextView
+        android:id="@+id/valueHRM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/dash"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/textSize_gigantic" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/valueHRM"
+        android:layout_toLeftOf="@id/valueHRM"
+        android:layout_toStartOf="@id/valueHRM">
+
+        <TextView
+            android:id="@+id/labelBodySensor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_bodysensor" />
+
+        <TextView
+            android:id="@+id/valueBodySensor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/non_applicable" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kyriakosalexandrou.bluetoothtoolkit"
+    android:versionCode="1"
+    android:versionName="0.9">
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.kyriakosalexandrou.bluetoothtoolkit.ui.activities.HomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.kyriakosalexandrou.bluetoothtoolkit.ui.activities.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.healththermometermeasurement.HtmDeviceActivity"
+            android:label="@string/title_activity_htm"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.heartratemeasurement.HrmDeviceActivity"
+            android:label="@string/title_activity_hrm"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.bloodpressuremeasurement.BpmDeviceActivity"
+            android:label="@string/title_activity_bpm"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.heartratemeasurement.HrmDeviceMultipleDevicesActivity"
+            android:label="@string/title_activity_multiple_hrm_devices"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.healththermometermeasurement.HtmDeviceMultipleDevicesActivity"
+            android:label="@string/title_activity_multiple_htm_devices"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.bloodpressuremeasurement.BpmDeviceMultipleDevicesActivity"
+            android:label="@string/title_activity_multiple_bpm_devices"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.kyriakosalexandrou.bluetoothtoolkit.bt.classic.spp.SppActivity"
+            android:label="@string/title_activity_spp"
+            android:screenOrientation="portrait" />
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+    </application>
+</manifest>

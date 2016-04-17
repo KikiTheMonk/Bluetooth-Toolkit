@@ -1,0 +1,196 @@
+<resources>
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <style name="AppTheme.Dialog" parent="android:Theme.Holo.Light.Dialog.NoActionBar" />
+
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
+        <item name="android:background">@color/action_bar_background</item>
+    </style>
+
+    <style name="MyActionBarTitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/action_bar_text_title</item>
+    </style>
+
+    <style name="ScreenContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/screen_background</item>
+    </style>
+
+    <style name="Hint">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:alpha">0.6</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="SpecificBleDeviceValuesContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="CommonBleDeviceValuesContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="ChartLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:id">@id/divider</item>
+        <item name="android:background">@color/primary</item>
+    </style>
+
+    <style name="Divider.Horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height_divider</item>
+        <item name="android:background">@color/primary</item>
+        <item name="android:paddingBottom">@dimen/header_divider_margin</item>
+    </style>
+
+    <!-- text -->
+    <style name="Text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/textSize_medium</item>
+    </style>
+
+    <!-- text CONTENT -->
+    <style name="Text.Content">
+        <item name="android:textSize">@dimen/textSize_small</item>
+    </style>
+
+    <style name="Text.Content.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text.Content.Black">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <!-- text TITLE -->
+    <style name="Text.Title">
+        <item name="android:textSize">@dimen/textSize_xxx_large</item>
+    </style>
+
+    <style name="Text.Title.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Title.Bold.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text.Title.Bold.Black">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <!-- text HEADER -->
+    <style name="Text.Title.Bold.Header">
+        <!--        <item name="android:layout_alignParentLeft">true</item>
+                <item name="android:layout_alignParentStart">true</item>-->
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="Text.Title.Bold.Header.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text.Title.Bold.Header.Black">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text.Title.Bold.Header.Dialog">
+        <item name="android:textSize">@dimen/textSize_large</item>
+    </style>
+
+    <style name="Text.Title.Bold.Header.Dialog.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Text.Title.Bold.Header.Dialog.Black">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Text.Title.Bold.Black.HomeItemLabel" />
+
+    <!-- button -->
+    <style name="Btn">
+        <item name="android:background">@drawable/main_button</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:paddingLeft">40dp</item>
+        <item name="android:paddingRight">40dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="Btn.Scan">
+        <item name="android:id">@id/btn_scan</item>
+        <item name="android:text">@string/btn_scan</item>
+    </style>
+
+
+    <style name="ProgressBarContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <!-- this is to consume focus of interaction behind the screen when the loading bar is visible -->
+        <item name="android:clickable">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:indeterminate">true</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+
+    <style name="ProgressBar" parent="android:Widget.DeviceDefault.ProgressBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:indeterminate">true</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+
+    <style name="ProgressBar.Small" parent="android:Widget.DeviceDefault.ProgressBar.Small" />
+
+    <style name="ProgressBar.Large" parent="android:Widget.DeviceDefault.ProgressBar.Large" />
+
+    <style name="ProgressBar.Fullscreen">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="ClearableEditTextWidget">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+</resources>
