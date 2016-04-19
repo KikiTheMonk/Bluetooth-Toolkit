@@ -38,21 +38,6 @@ public class BtcSearchHelper extends BtSearchHelper {
         mBtcSearchHelperCallback = btAdapterHelperCallback;
     }
 
-//    public BluetoothAdapter getBluetoothAdapter() {
-//        return mBtAdapter;
-//    }
-
-//    /**
-//     * checking if a discovery is in progress, discovery scans for all Bluetooth
-//     * device types
-//     *
-//     * @return true if discovering
-//     */
-//    public boolean isDiscovering() {
-//        return mIsBtcScanning;
-////        return mBtAdapter.isDiscovering();
-//    }
-
     /**
      * initiates BT Classic scan operation. The scan time operation is 12
      * seconds and this cannot be changed. <br/>

@@ -349,7 +349,6 @@ public abstract class BleBaseDeviceManager extends BluetoothGattCallback {
 
     private boolean writeDescriptorForNotification(final BluetoothGattCharacteristic ch,
                                                    final boolean enabled) {
-
         BluetoothGattDescriptor descriptor = getCccdDescriptor(ch);
         if (descriptor == null)
             return false;
@@ -475,6 +474,13 @@ public abstract class BleBaseDeviceManager extends BluetoothGattCallback {
      * @param characteristic the characteristic that was found
      */
     protected void onCharFound(final BluetoothGattCharacteristic characteristic) {
+        if (BleUUIDs.Service.BATTERY.equals(characteristic.getService()
+                .getUuid())) {
+            if (BleUUIDs.Characteristic.BATTERY_LEVEL
+                    .equals(characteristic.getUuid())) {
+                addCharToQueue(characteristic);
+            }
+        }
     }
 
     /**

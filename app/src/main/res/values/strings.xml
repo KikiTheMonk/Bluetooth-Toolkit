@@ -54,7 +54,7 @@
     <string name="beats_per_minute">BPM</string>
     <string name="heartRateTV">Heart Rate Device</string>
     <string name="label_pulse">Pulse: </string>
-    <string name="label_bodysensor">Body Sensor: </string>
+    <string name="label_body_sensor">Body Sensor: </string>
     <string name="about_heart_rate">
         Scan and connect to a BLE device running a Heart rate monitor app.
         Once connected the sensor data and position will be displayed and plotted on the graph</string>
@@ -105,7 +105,7 @@
     <string name="img_content_description">image</string>
     <string name="icon_header_contentDescription">@string/img_content_description</string>
     <string name="permission_access_coarse_location_msg">You need to allow access to \'Access Coarse Location\' for BLE</string>
-    <string name="db">" db"</string>
+    <string name="db"> db</string>
     <string name="percentage">%</string>
     <string name="celsius_unit">" C"</string>
     <string name="unknown_device">Unknown Device</string>

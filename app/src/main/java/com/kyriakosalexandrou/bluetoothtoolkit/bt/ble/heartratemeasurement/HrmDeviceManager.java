@@ -51,15 +51,7 @@ public class HrmDeviceManager extends BleBaseDeviceManager {
 
     @Override
     protected void onCharFound(BluetoothGattCharacteristic characteristic) {
-        super.onCharFound(characteristic);
-
-        if (BleUUIDs.Service.BATTERY.equals(characteristic.getService()
-                .getUuid())) {
-            if (BleUUIDs.Characteristic.BATTERY_LEVEL
-                    .equals(characteristic.getUuid())) {
-                addCharToQueue(characteristic);
-            }
-        } else if (BleUUIDs.Service.HEART_RATE.equals(characteristic
+        if (BleUUIDs.Service.HEART_RATE.equals(characteristic
                 .getService().getUuid())) {
             if (BleUUIDs.Characteristic.HEART_RATE_MEASUREMENT
                     .equals(characteristic.getUuid())) {
@@ -70,6 +62,8 @@ public class HrmDeviceManager extends BleBaseDeviceManager {
                     .equals(characteristic.getUuid())) {
                 addCharToQueue(characteristic);
             }
+        } else {
+            super.onCharFound(characteristic);
         }
     }
 

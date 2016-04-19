@@ -23,7 +23,7 @@
             android:id="@+id/labelBodySensor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/label_bodysensor" />
+            android:text="@string/label_body_sensor" />
 
         <TextView
             android:id="@+id/valueBodySensor"

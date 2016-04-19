@@ -28,7 +28,6 @@ public class BpmDeviceActivity extends BleBaseSingleDeviceActivity implements Bp
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.bpm, menu);
         getActionBar().setIcon(R.drawable.ic_bpm);
         getActionBar().setDisplayHomeAsUpEnabled(true);

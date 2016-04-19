@@ -25,6 +25,7 @@ public class HrmMultipleDevicesAdapter extends
             convertView = mInflater.inflate(
                     R.layout.item_multiple_hrm_devices,
                     parent, false);
+
             fields = new FieldReferences();
             bindViews(fields, convertView);
             convertView.setTag(fields);
@@ -32,9 +33,7 @@ public class HrmMultipleDevicesAdapter extends
             fields = (FieldReferences) convertView.getTag();
         }
 
-//        if (mDevices.size() > position) {
         mHrmDeviceManager = (HrmDeviceManager) mDevices.get(position);
-//        }
 
         if (mHrmDeviceManager != null) {
             setGenericViews(fields, position);
@@ -56,39 +55,8 @@ public class HrmMultipleDevicesAdapter extends
         fields.hrmValue = (TextView) convertView.findViewById(R.id.valueHRM);
     }
 
-//    public void setHrmValue(final FieldReferences fields) {
-////        if (mHrmDeviceManager.getHrmValue() != null) {
-//            fields.hrmValue.setText(getFormattedHtmValue());
-////        } else {
-////            fields.hrmValue.setText(mContext.getString(R.string.dash));
-////        }
-//    }
-//
-//    public void setBodySensorLocationValue(final FieldReferences fields) {
-////        if (mHrmDeviceManager.getHrmValue() != null) {
-//        fields.bodySensorValue.setText(getFormattedBodySensorValue());
-////        } else {
-////            fields.hrmValue.setText(mContext.getString(R.string.non_applicable));
-////        }
-//    }
-
     private void setHeartRateViews(final FieldReferences fields) {
-
         fields.hrmValue.setText(mHrmDeviceManager.getFormattedHtmValue());
         fields.bodySensorValue.setText(mHrmDeviceManager.getFormattedBodySensorValue());
-
-//        setHrmValue(fields);
-//        setBodySensorLocationValue(fields);
-//        if (mHrmDeviceManager.getHrmValue() != null) {
-//            fields.hrmValue.setText(getFormattedHtmValue());
-//        } else {
-//            fields.hrmValue.setText(mContext.getString(R.string.dash));
-//        }
-
-//        if (mHrmDeviceManager.getBodySensorLocationValue() != null) {
-//            fields.bodySensorValue.setText(getFormattedBodySensorValue());
-//        } else {
-//            fields.bodySensorValue.setText(mContext.getString(R.string.non_applicable));
-//        }
     }
 }

@@ -7,6 +7,7 @@ import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothProfile;
 import android.os.Build;
 
+import com.kyriakosalexandrou.bluetoothtoolkit.R;
 import com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.BleBaseDeviceManager;
 import com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.BleBaseDeviceManagerUiCallback;
 import com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.BleUUIDs;
@@ -29,31 +30,25 @@ public class HtmDeviceManager extends BleBaseDeviceManager {
         mHtmDeviceManagerUICallback = (HtmDeviceManagerUICallback) bleBaseDeviceManagerUiCallback;
     }
 
-    public float getTempMeasurementValue() {
+    public float getHtmValue() {
         return mTempMeasurementValue;
     }
 
     public String getFormattedHtmValue() {
-        return getTempMeasurementValue() + "";
+        return mTempMeasurementValue + " " + mContext.getString(R.string.celsius_unit);
     }
 
     @Override
     protected void onCharFound(BluetoothGattCharacteristic characteristic) {
-        super.onCharFound(characteristic);
-
-        if (BleUUIDs.Service.BATTERY.equals(characteristic.getService()
-                .getUuid())) {
-            if (BleUUIDs.Characteristic.BATTERY_LEVEL
-                    .equals(characteristic.getUuid())) {
-                addCharToQueue(characteristic);
-            }
-        } else if (BleUUIDs.Service.HEALTH_THERMOMETER
+        if (BleUUIDs.Service.HEALTH_THERMOMETER
                 .equals(characteristic.getService().getUuid())) {
             if (BleUUIDs.Characteristic.TEMPERATURE_MEASUREMENT
                     .equals(characteristic.getUuid())) {
                 isTempMeasurementFound = true;
                 addCharToQueue(characteristic);
             }
+        } else {
+            super.onCharFound(characteristic);
         }
     }
 
