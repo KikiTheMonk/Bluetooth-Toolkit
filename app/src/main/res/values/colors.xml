@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#A5A5A5</color>
+    <color name="primary">@color/light_grey</color>
     <color name="primary_dark">@color/primary</color>
     <color name="accent">@color/red</color>
 
-    <color name="action_bar_background">@color/blue</color>
-    <color name="action_bar_text_title">@android:color/white</color>
+    <color name="action_bar_background">@color/silver</color>
+    <color name="action_bar_text_title">@color/white</color>
 
     <color name="header_background">@android:color/white</color>
-    <color name="header_text">@android:color/black</color>
-    <color name="header_divider">@android:color/holo_orange_dark</color>
+    <color name="header_text">@color/black</color>
+    <color name="header_divider">@color/dark_orange</color>
 
-    <color name="clearable_edittext_background">@android:color/white</color>
-    <color name="clearable_edittext_clear_icon_background">@android:color/holo_orange_dark</color>
+    <color name="clearable_edittext_background">@color/white</color>
+    <color name="clearable_edittext_clear_icon_background">@color/dark_orange</color>
 
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
     <color name="red">#800000</color>
-    <color name="blue">#4863A0</color>
+    <color name="dark_orange">@android:color/holo_orange_dark</color>
+    <color name="light_grey">#A5A5A5</color>
+    <color name="dark_blue">#4863A0</color>
+    <!--<color name="columbia_blue">#C6AEC7</color>-->
+    <color name="silver">#C0C0C0</color>
 </resources>
