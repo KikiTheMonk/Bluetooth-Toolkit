@@ -9,6 +9,7 @@
         android:layout_above="@+id/btn_scan" />
 
     <Button
+        android:id="@id/btn_scan"
         style="@style/Btn.Scan"
         android:layout_alignParentBottom="true" />
 
