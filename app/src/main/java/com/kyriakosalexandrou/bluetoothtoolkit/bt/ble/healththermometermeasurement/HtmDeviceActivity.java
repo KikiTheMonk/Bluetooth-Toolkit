@@ -24,13 +24,13 @@ public class HtmDeviceActivity extends BleBaseSingleDeviceActivity implements
 
         initialiseDialogAbout(getResources().getString(
                 R.string.about_thermometer));
-        initialiseDialogFoundDevices(getString(R.string.thermometer), getResources().getDrawable(R.drawable.ic_htm));
+        initialiseDialogFoundDevices(getString(R.string.thermometer), getResources().getDrawable(R.drawable.ic_toolbar_htm));
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.htm, menu);
-        getActionBar().setIcon(R.drawable.ic_htm);
+        getActionBar().setIcon(R.drawable.ic_toolbar_htm);
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
         return super.onCreateOptionsMenu(menu);

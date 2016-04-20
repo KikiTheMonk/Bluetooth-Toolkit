@@ -38,7 +38,7 @@ public class SppActivity extends BtcBaseActivity implements SPPManagerUiCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState, R.layout.activity_spp);
         initialiseDialogAbout(getResources().getString(R.string.about_spp));
-        initialiseDialogFoundDevices(getString(R.string.bt_classic), getResources().getDrawable(R.drawable.ic_spp));
+        initialiseDialogFoundDevices(getString(R.string.bt_classic), getResources().getDrawable(R.drawable.ic_toolbar_spp));
         mSppManager = new SPPManager(getApplicationContext(), this);
     }
 
@@ -83,8 +83,8 @@ public class SppActivity extends BtcBaseActivity implements SPPManagerUiCallback
 
                     InputMethodManager inputManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
 
-                    inputManager.hideSoftInputFromWindow(getCurrentFocus()
-                                    .getWindowToken(),
+                    inputManager.hideSoftInputFromWindow(
+                            getCurrentFocus().getWindowToken(),
                             InputMethodManager.HIDE_NOT_ALWAYS);
 
                     if (isPrefClearTextAfterSending) {
@@ -103,22 +103,6 @@ public class SppActivity extends BtcBaseActivity implements SPPManagerUiCallback
         });
     }
 
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//
-//        if (isInNewScreen || isPrefRunInBackground) {
-//            // let the app run normally in the background
-//        } else {
-//            // stop scanning or disconnect if we are connected
-//            if (sBtAdapterHelper.getBtcSearchHelper().isDiscovering()) {
-//                sBtAdapterHelper.getBtcSearchHelper().stopDiscovery();
-//            } else if (mSppManager.isConnected()) {
-//                mSppManager.disconnect();
-//            }
-//        }
-//    }
-
     @Override
     public void onDialogFoundDevicesItemClick(AdapterView<?> arg0,
                                               View view, int position, long id) {
@@ -134,27 +118,12 @@ public class SppActivity extends BtcBaseActivity implements SPPManagerUiCallback
         mSppManager.connect();
         uiInvalidateViewsState();
     }
-//
-//    @Override
-//    public void onDialogFoundDevicesCancel(DialogInterface arg0) {
-//        sBtAdapterHelper.getBtcSearchHelper().stopDiscovery();
-//        uiInvalidateViewsState();
-//    }
-//
-//    @Override
-//    public void onBackPressed() {
-//        if (mSppManager != null && mSppManager.isConnected()) {
-//            mSppManager.disconnect();
-//        }
-//        uiInvalidateViewsState();
-//        finish();
-//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.spp, menu);
-        getActionBar().setIcon(R.drawable.ic_spp);
+        getActionBar().setIcon(R.drawable.ic_toolbar_spp);
 //        getActionBar().setDisplayHomeAsUpEnabled(true);
 
         return super.onCreateOptionsMenu(menu);
@@ -163,15 +132,6 @@ public class SppActivity extends BtcBaseActivity implements SPPManagerUiCallback
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-
-//            case android.R.id.home:
-//                if (mSppManager != null && mSppManager.isConnected()) {
-//                    mSppManager.disconnect();
-//                    invalidateOptionsMenu();
-//                } else {
-//                    finish();
-//                }
-//                break;
             case R.id.action_clear:
                 mValueConsoleOutputTv.setText("");
 
@@ -180,7 +140,6 @@ public class SppActivity extends BtcBaseActivity implements SPPManagerUiCallback
 
                 mValueRxCounterTv.setText("" + mCounterRx);
                 mValueTxCounterTv.setText("" + mCounterTx);
-
                 break;
         }
 
@@ -196,19 +155,15 @@ public class SppActivity extends BtcBaseActivity implements SPPManagerUiCallback
             public void run() {
 
                 if (mSppManager == null) {
-//                    mBtnScan.setText(R.string.btn_scan);
                     mBtnSend.setEnabled(false);
                 } else if (!mSppManager.isConnected()
                         && !mSppManager.isConnecting()) {
-//                    mBtnScan.setText(R.string.btn_scan);
                     mBtnSend.setEnabled(false);
                 } else if (!mSppManager.isConnected()
                         && mSppManager.isConnecting()) {
-//                    mBtnScan.setText(R.string.btn_connecting);
                     mBtnSend.setEnabled(false);
                 } else if (mSppManager.isConnected()
                         && !mSppManager.isConnecting()) {
-//                    mBtnScan.setText(R.string.btn_disconnect);
                     mBtnSend.setEnabled(true);
                 }
 
@@ -216,21 +171,6 @@ public class SppActivity extends BtcBaseActivity implements SPPManagerUiCallback
             }
         });
     }
-
-//    @Override
-//    public void onUiBtcRemoteDeviceConnected() {
-//        uiInvalidateViewsState();
-//    }
-//
-//    @Override
-//    public void onUiBtcRemoteDeviceDisconnected() {
-//        uiInvalidateViewsState();
-//    }
-//
-//    @Override
-//    public void onUiBtcConnectFailed() {
-//        uiInvalidateViewsState();
-//    }
 
     @Override
     public void onUiRemoteDeviceRead(final String result) {

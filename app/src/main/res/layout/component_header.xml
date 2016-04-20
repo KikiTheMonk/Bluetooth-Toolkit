@@ -21,7 +21,7 @@
             android:layout_centerVertical="true"
             android:adjustViewBounds="true"
             android:contentDescription="@string/icon_header_contentDescription"
-            tools:src="@drawable/ic_bpm" />
+            tools:src="@drawable/ic_toolbar_bpm" />
 
         <TextView
             android:id="@+id/title"

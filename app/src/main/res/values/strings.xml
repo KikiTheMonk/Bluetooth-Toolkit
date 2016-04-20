@@ -3,7 +3,7 @@
 <resources>
 
     <string name="app_name">Bluetooth Toolkit</string>
-    <string name="version_number">Version 0.9</string>
+    <string name="version_number">Version 1.0</string>
 
     <!-- screens titles -->
     <string name="title_activity_settings">@string/settings</string>
