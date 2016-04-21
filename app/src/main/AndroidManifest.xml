@@ -35,37 +35,37 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.healththermometermeasurement.HtmDeviceActivity"
+            android:name=".ui.activities.HtmDeviceActivity"
             android:label="@string/title_activity_htm"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.heartratemeasurement.HrmDeviceActivity"
+            android:name=".ui.activities.HrmDeviceActivity"
             android:label="@string/title_activity_hrm"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.bloodpressuremeasurement.BpmDeviceActivity"
+            android:name=".ui.activities.BpmDeviceActivity"
             android:label="@string/title_activity_bpm"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.heartratemeasurement.HrmDeviceMultipleDevicesActivity"
+            android:name=".ui.activities.HrmDeviceMultipleDevicesActivity"
             android:label="@string/title_activity_multiple_hrm_devices"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.healththermometermeasurement.HtmDeviceMultipleDevicesActivity"
+            android:name=".ui.activities.HtmDeviceMultipleDevicesActivity"
             android:label="@string/title_activity_multiple_htm_devices"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.bloodpressuremeasurement.BpmDeviceMultipleDevicesActivity"
+            android:name=".ui.activities.BpmDeviceMultipleDevicesActivity"
             android:label="@string/title_activity_multiple_bpm_devices"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.kyriakosalexandrou.bluetoothtoolkit.bt.classic.spp.SppActivity"
+            android:name=".ui.activities.SppActivity"
             android:label="@string/title_activity_spp"
             android:screenOrientation="portrait" />
         <!-- ATTENTION: This was auto-generated to add Google Play services to your project for

@@ -5,9 +5,8 @@ import android.view.Menu;
 import android.widget.GridView;
 
 import com.kyriakosalexandrou.bluetoothtoolkit.R;
-import com.kyriakosalexandrou.bluetoothtoolkit.adapters.HomeIconsAdapter;
-import com.kyriakosalexandrou.bluetoothtoolkit.bt.BtBaseActivity;
-import com.kyriakosalexandrou.bluetoothtoolkit.bt.BtSupportedFunctionalities;
+import com.kyriakosalexandrou.bluetoothtoolkit.ui.adapters.HomeIconsAdapter;
+import com.kyriakosalexandrou.bluetoothtoolkit.ui.components.BtSupportedFunctionalities;
 import com.kyriakosalexandrou.bluetoothtoolkit.models.BtHomeScreenFunctionality;
 
 import java.util.ArrayList;

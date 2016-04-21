@@ -7,10 +7,10 @@ import android.os.Build;
 import android.os.Build.VERSION;
 import android.util.Log;
 
-import com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.BleSearch.BleSearchBaseHelper;
-import com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.BleSearch.BleSearchPostJellyBeanMr2Helper;
-import com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.BleSearch.BleSearchPostLollipopHelper;
-import com.kyriakosalexandrou.bluetoothtoolkit.bt.classic.BtcSearchHelper;
+import com.kyriakosalexandrou.bluetoothtoolkit.bt.searchhelpers.blesearch.BleSearchBaseHelper;
+import com.kyriakosalexandrou.bluetoothtoolkit.bt.searchhelpers.blesearch.BleSearchPostJellyBeanMr2Helper;
+import com.kyriakosalexandrou.bluetoothtoolkit.bt.searchhelpers.blesearch.BleSearchPostLollipopHelper;
+import com.kyriakosalexandrou.bluetoothtoolkit.bt.searchhelpers.btcsearch.BtcSearchHelper;
 
 /**
  * This class is a wrapper for the Android BluetoothAdapter class

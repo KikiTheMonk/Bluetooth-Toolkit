@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.kyriakosalexandrou.bluetoothtoolkit.ui.components.ComponentCommonBleDevicePropertiesDetails
+        android:id="@+id/common_ble_properties_component"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:id="@+id/specific_blood_pressure_values"
+        layout="@layout/include_ble_bpm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
