@@ -22,7 +22,7 @@ public class HtmDeviceMultipleDevicesActivity extends
 
         initialiseDialogAbout(getResources().getString(
                 R.string.about_multiple_thermometer));
-        initialiseDialogFoundDevices("HTM", getResources().getDrawable(R.drawable.ic_multiple_htm));
+        initialiseDialogFoundDevices("HTM", getResources().getDrawable(R.drawable.ic_toolbar_multiple_htm));
 
         setHintTextValue(R.string.about_multiple_thermometer);
     }
@@ -60,7 +60,7 @@ public class HtmDeviceMultipleDevicesActivity extends
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.multiple_htm, menu);
         if (getActionBar() != null) {
-            getActionBar().setIcon(R.drawable.ic_multiple_htm);
+            getActionBar().setIcon(R.drawable.ic_toolbar_multiple_htm);
             getActionBar().setDisplayHomeAsUpEnabled(true);
         }
 

@@ -33,13 +33,9 @@ public class HtmMultipleDevicesAdapter extends
             fields = (FieldReferences) convertView.getTag();
         }
 
-//        if (mDevices.size() > position) {
-//            mHtmDeviceManager = (HtmDeviceManager) mDevices.get(position);
-//        }
         mHtmDeviceManager = (HtmDeviceManager) mDevices.get(position);
 
         if (mHtmDeviceManager != null) {
-            // set proper values into the view
             setGenericViews(fields, position);
             setThermometerViews(fields);
         }
@@ -58,10 +54,6 @@ public class HtmMultipleDevicesAdapter extends
     }
 
     private void setThermometerViews(final FieldReferences fields) {
-//        if (mHtmDeviceManager.getTempMeasurementValue() != null) {
-            fields.tempMeasurementValue.setText(mHtmDeviceManager.getFormattedHtmValue() + mContext.getString(R.string.celsius_unit));
-//        } else {
-//            fields.tempMeasurementValue.setText(mContext.getString(R.string.dash));
-//        }
+        fields.tempMeasurementValue.setText(mHtmDeviceManager.getFormattedHtmValue());
     }
 }

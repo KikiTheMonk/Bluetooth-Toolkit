@@ -27,11 +27,6 @@ public abstract class BleBaseSingleDeviceActivity extends BleBaseActivity {
         mBleBaseDeviceManager = bleBaseDeviceManager;
     }
 
-//    @Override
-//    public void onCreate(Bundle savedInstanceState, int layoutResID) {
-//        super.onCreate(savedInstanceState, layoutResID);
-//    }
-
     @Override
     public void bindViews() {
         super.bindViews();

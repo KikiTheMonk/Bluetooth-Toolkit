@@ -21,18 +21,16 @@ public class HtmDeviceActivity extends BleBaseSingleDeviceActivity implements
         super.onCreate(savedInstanceState, R.layout.activity_htm, new HtmDeviceManager(this, this));
 
         mHtmDeviceManager = (HtmDeviceManager) mBleBaseDeviceManager;
-//        setBleBaseDeviceManager(mHtmDeviceManager);
 
         initialiseDialogAbout(getResources().getString(
                 R.string.about_thermometer));
-        initialiseDialogFoundDevices(getString(R.string.thermometer), getResources().getDrawable(R.drawable.ic_htm));
+        initialiseDialogFoundDevices(getString(R.string.thermometer), getResources().getDrawable(R.drawable.ic_toolbar_htm));
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.htm, menu);
-        getActionBar().setIcon(R.drawable.ic_htm);
+        getActionBar().setIcon(R.drawable.ic_toolbar_htm);
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
         return super.onCreateOptionsMenu(menu);
@@ -58,13 +56,6 @@ public class HtmDeviceActivity extends BleBaseSingleDeviceActivity implements
     @Override
     public void onUiConnected() {
         super.onUiConnected();
-
-//        runOnUiThread(new Runnable() {
-//            @Override
-//            public void run() {
-//                updateCommonViews();
-//            }
-//        });
         uiInvalidateViewsState();
     }
 

@@ -23,7 +23,7 @@ public class BpmDeviceMultipleDevicesActivity extends
 
         initialiseDialogAbout(getResources().getString(
                 R.string.about_multiple_bloodpressure));
-        initialiseDialogFoundDevices("BPM", getResources().getDrawable(R.drawable.ic_multiple_bpm));
+        initialiseDialogFoundDevices("BPM", getResources().getDrawable(R.drawable.ic_toolbar_multiple_bpm));
 
         setHintTextValue(R.string.about_multiple_bloodpressure);
     }
@@ -62,7 +62,7 @@ public class BpmDeviceMultipleDevicesActivity extends
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.multiple_bpm, menu);
         if (getActionBar() != null) {
-            getActionBar().setIcon(R.drawable.ic_multiple_bpm);
+            getActionBar().setIcon(R.drawable.ic_toolbar_multiple_bpm);
             getActionBar().setDisplayHomeAsUpEnabled(true);
         }
         return true;

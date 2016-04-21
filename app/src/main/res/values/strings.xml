@@ -3,7 +3,7 @@
 <resources>
 
     <string name="app_name">Bluetooth Toolkit</string>
-    <string name="version_number">Version 0.9</string>
+    <string name="version_number">Version 1.0</string>
 
     <!-- screens titles -->
     <string name="title_activity_settings">@string/settings</string>
@@ -45,7 +45,7 @@
     <br/><br/>
     My <a href="https://play.google.com/store/apps/developer?id=Kyriakos+Alexandrou">Playstore</a> account
     <br/><br/>
-    Functionality icons made by <a href="http://www.freepik.com/">Freepik</a>
+    Functionality icons made by <a href="http://www.freepik.com/">Freepik</a> and <a href="https://dotonpaper.net/">Dot on Paper</a>
 
     ]]></string>
 
@@ -54,7 +54,7 @@
     <string name="beats_per_minute">BPM</string>
     <string name="heartRateTV">Heart Rate Device</string>
     <string name="label_pulse">Pulse: </string>
-    <string name="label_bodysensor">Body Sensor: </string>
+    <string name="label_body_sensor">Body Sensor: </string>
     <string name="about_heart_rate">
         Scan and connect to a BLE device running a Heart rate monitor app.
         Once connected the sensor data and position will be displayed and plotted on the graph</string>
@@ -105,7 +105,7 @@
     <string name="img_content_description">image</string>
     <string name="icon_header_contentDescription">@string/img_content_description</string>
     <string name="permission_access_coarse_location_msg">You need to allow access to \'Access Coarse Location\' for BLE</string>
-    <string name="db">" db"</string>
+    <string name="db"> db</string>
     <string name="percentage">%</string>
     <string name="celsius_unit">" C"</string>
     <string name="unknown_device">Unknown Device</string>

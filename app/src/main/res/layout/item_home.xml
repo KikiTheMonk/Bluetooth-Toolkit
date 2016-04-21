@@ -19,7 +19,7 @@
             android:layout_height="@dimen/home_icon_size"
             android:background="@drawable/selector_bt_functionality"
             android:contentDescription="@string/img_content_description"
-            tools:src="@drawable/ic_bpm" />
+            tools:src="@drawable/ic_home_screen_bpm" />
     </LinearLayout>
 
     <LinearLayout
@@ -76,7 +76,7 @@
             android:layout_height="@dimen/home_icon_size"
             android:background="@drawable/selector_bt_functionality"
             android:contentDescription="@string/img_content_description"
-            tools:src="@drawable/ic_multiple_bpm" />
+            tools:src="@drawable/ic_home_screen_multiple_bpm" />
     </LinearLayout>
 
 </LinearLayout>

@@ -23,14 +23,15 @@ public class BpmDeviceActivity extends BleBaseSingleDeviceActivity implements Bp
 
         initialiseDialogAbout(getResources().getString(
                 R.string.about_blood_pressure));
-        initialiseDialogFoundDevices(getString(R.string.blood_pressure), getResources().getDrawable(R.drawable.ic_bpm));
+        initialiseDialogFoundDevices(
+                getString(R.string.blood_pressure),
+                getResources().getDrawable(R.drawable.ic_toolbar_bpm));
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.bpm, menu);
-        getActionBar().setIcon(R.drawable.ic_bpm);
+        getActionBar().setIcon(R.drawable.ic_toolbar_bpm);
         getActionBar().setDisplayHomeAsUpEnabled(true);
         return super.onCreateOptionsMenu(menu);
     }

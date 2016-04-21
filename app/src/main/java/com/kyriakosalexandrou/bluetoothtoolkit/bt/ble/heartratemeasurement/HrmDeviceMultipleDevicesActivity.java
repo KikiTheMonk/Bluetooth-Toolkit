@@ -23,7 +23,7 @@ public class HrmDeviceMultipleDevicesActivity extends
 
         initialiseDialogAbout(getResources().getString(
                 R.string.about_multiple_heart_rate));
-        initialiseDialogFoundDevices("HRM", getResources().getDrawable(R.drawable.ic_multiple_hrm));
+        initialiseDialogFoundDevices("HRM", getResources().getDrawable(R.drawable.ic_toolbar_multiple_hrm));
 
         setHintTextValue(R.string.about_multiple_heart_rate);
     }
@@ -62,7 +62,7 @@ public class HrmDeviceMultipleDevicesActivity extends
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.multiple_hrm, menu);
         if (getActionBar() != null) {
-            getActionBar().setIcon(R.drawable.ic_multiple_hrm);
+            getActionBar().setIcon(R.drawable.ic_toolbar_multiple_hrm);
             getActionBar().setDisplayHomeAsUpEnabled(true);
         }
 

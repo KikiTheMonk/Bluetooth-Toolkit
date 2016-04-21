@@ -75,8 +75,8 @@ public class HeaderComponent extends LinearLayout {
     }
 
     public void shouldShowProgressBar(final BtAdapterHelper btAdapterHelper) {
-        if (btAdapterHelper.getBleSearchBaseHelper().isScanning()
-                || btAdapterHelper.getBtcSearchHelper().isScanning()) {
+        if (btAdapterHelper.getBtcSearchHelper().isScanning()
+                || btAdapterHelper.getBleSearchBaseHelper().isScanning()) {
             forceShowProgressBar();
         } else {
             forceHideProgressBar();

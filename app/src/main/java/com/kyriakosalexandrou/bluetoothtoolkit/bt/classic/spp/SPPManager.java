@@ -17,13 +17,6 @@ public class SPPManager extends BtcBaseDeviceManager {
             .fromString("00001101-0000-1000-8000-00805F9B34FB");
     private SPPManagerUiCallback mSPPManagerUiCallback;
 
-//    public SPPManager(Context context,
-//                      BtcBaseDeviceManagerUiCallback btcBaseDeviceManagerUiCallback,
-//                      BluetoothDevice bluetoothDevice) {
-//        super(context, btcBaseDeviceManagerUiCallback, bluetoothDevice, UUID_SPP);
-//        mSPPManagerUiCallback = (SPPManagerUiCallback) btcBaseDeviceManagerUiCallback;
-//    }
-
     public SPPManager(Context context,
                       BtcBaseDeviceManagerUiCallback btcBaseDeviceManagerUiCallback) {
         super(context, btcBaseDeviceManagerUiCallback, UUID_SPP);
@@ -34,19 +27,16 @@ public class SPPManager extends BtcBaseDeviceManager {
     public void onBtcConnected() {
         super.onBtcConnected();
         startDataListeningFromRemoteDevice(TOTAL_BYTES_TO_READ_FROM_REMOTE_DEVICE);
-//        mSPPManagerUiCallback.onUiBtcRemoteDeviceConnected();
     }
 
     @Override
     public void onBtcDisconnected() {
         super.onBtcDisconnected();
-//        mSPPManagerUiCallback.onUiBtcRemoteDeviceDisconnected();
     }
 
     @Override
     public void onBtcConnectFailed() {
         super.onBtcConnectFailed();
-//        mSPPManagerUiCallback.onUiBtcRemoteDeviceFailed();
     }
 
     @Override

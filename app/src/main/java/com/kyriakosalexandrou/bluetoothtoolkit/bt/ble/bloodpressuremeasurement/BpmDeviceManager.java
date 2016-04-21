@@ -6,9 +6,9 @@ import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothProfile;
 import android.util.Log;
 
-import com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.BleUUIDs;
-import com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.BleBaseDeviceManagerUiCallback;
 import com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.BleBaseDeviceManager;
+import com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.BleBaseDeviceManagerUiCallback;
+import com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.BleUUIDs;
 
 import java.util.UUID;
 
@@ -84,21 +84,15 @@ public class BpmDeviceManager extends BleBaseDeviceManager {
 
     @Override
     protected void onCharFound(BluetoothGattCharacteristic characteristic) {
-        super.onCharFound(characteristic);
-
-        if (BleUUIDs.Service.BATTERY.equals(characteristic.getService()
-                .getUuid())) {
-            if (BleUUIDs.Characteristic.BATTERY_LEVEL
-                    .equals(characteristic.getUuid())) {
-                addCharToQueue(characteristic);
-            }
-        } else if (BleUUIDs.Service.BLOOD_PRESSURE.equals(characteristic
+        if (BleUUIDs.Service.BLOOD_PRESSURE.equals(characteristic
                 .getService().getUuid())) {
             if (BleUUIDs.Characteristic.BLOOD_PRESSURE_MEASUREMENT
                     .equals(characteristic.getUuid())) {
                 addCharToQueue(characteristic);
                 isBpMeasurementFound = true;
             }
+        } else {
+            super.onCharFound(characteristic);
         }
     }
 

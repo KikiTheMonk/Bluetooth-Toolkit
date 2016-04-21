@@ -99,8 +99,8 @@ public class HomeActivity extends BtBaseActivity {
 
     private BtHomeScreenFunctionality createBpmFunctionalityItem() {
         int[] bpmImages = new int[2];
-        bpmImages[0] = R.drawable.ic_bpm;
-        bpmImages[1] = R.drawable.ic_multiple_bpm;
+        bpmImages[0] = R.drawable.ic_home_screen_bpm;
+        bpmImages[1] = R.drawable.ic_home_screen_multiple_bpm;
         return new BtHomeScreenFunctionality(
                 BtHomeScreenFunctionality.BtFunctionalityType.BPM,
                 BtHomeScreenFunctionality.BtType.BLE_CENTRAL,
@@ -111,8 +111,8 @@ public class HomeActivity extends BtBaseActivity {
 
     private BtHomeScreenFunctionality createHrmFunctionalityItem() {
         int[] hrImages = new int[2];
-        hrImages[0] = R.drawable.ic_hrm;
-        hrImages[1] = R.drawable.ic_multiple_hrm;
+        hrImages[0] = R.drawable.ic_home_screen_hrm;
+        hrImages[1] = R.drawable.ic_home_screen_multiple_hrm;
         return new BtHomeScreenFunctionality(
                 BtHomeScreenFunctionality.BtFunctionalityType.HRM,
                 BtHomeScreenFunctionality.BtType.BLE_CENTRAL,
@@ -123,8 +123,8 @@ public class HomeActivity extends BtBaseActivity {
 
     private BtHomeScreenFunctionality createHtmFunctionalityItem() {
         int[] thermometerImages = new int[2];
-        thermometerImages[0] = R.drawable.ic_htm;
-        thermometerImages[1] = R.drawable.ic_multiple_htm;
+        thermometerImages[0] = R.drawable.ic_home_screen_htm;
+        thermometerImages[1] = R.drawable.ic_home_screen_multiple_htm;
         return new BtHomeScreenFunctionality(
                 BtHomeScreenFunctionality.BtFunctionalityType.HTM,
                 BtHomeScreenFunctionality.BtType.BLE_CENTRAL,
@@ -135,7 +135,7 @@ public class HomeActivity extends BtBaseActivity {
 
     private BtHomeScreenFunctionality createSppFunctionalityItem() {
         int[] sppImages = new int[1];
-        sppImages[0] = R.drawable.ic_spp;
+        sppImages[0] = R.drawable.ic_home_screen_spp;
         return new BtHomeScreenFunctionality(
                 BtHomeScreenFunctionality.BtFunctionalityType.SPP,
                 BtHomeScreenFunctionality.BtType.BT_CLASSIC,
