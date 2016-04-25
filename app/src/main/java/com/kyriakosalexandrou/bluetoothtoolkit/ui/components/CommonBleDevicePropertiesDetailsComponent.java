@@ -35,8 +35,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.kyriakosalexandrou.bluetoothtoolkit.R;
-import com.kyriakosalexandrou.bluetoothtoolkit.UtilHelper;
-import com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.BleBaseDeviceManager;
+import com.kyriakosalexandrou.bluetoothtoolkit.helpers.UtilHelper;
+import com.kyriakosalexandrou.bluetoothtoolkit.managers.BleBaseDeviceManager;
 
 /**
  * component used to show the generic BLE properties such us device name, address, battery, rssi etc.
@@ -67,7 +67,7 @@ public class CommonBleDevicePropertiesDetailsComponent extends LinearLayout {
 
     private void init() {
         LayoutInflater inflater = UtilHelper.getLayoutInflater(getContext());
-        View view = inflater.inflate(R.layout.common_ble_device_properties_details_component, this, true);
+        View view = inflater.inflate(R.layout.component_common_ble_device_properties_details, this, true);
         bindViews(view);
     }
 

@@ -22,20 +22,24 @@
  * SOFTWARE.
  */
 
-package com.kyriakosalexandrou.bluetoothtoolkit.ui.fragments;
+package com.kyriakosalexandrou.bluetoothtoolkit.helpers;
 
-import android.os.Bundle;
-import android.preference.PreferenceFragment;
+import android.content.Context;
+import android.content.res.Resources;
+import android.support.annotation.ColorRes;
+import android.support.annotation.Nullable;
 
-import com.kyriakosalexandrou.bluetoothtoolkit.R;
+public class ApiWrapper {
+    private final static String TAG = ApiWrapper.class.getSimpleName();
 
-public class SettingsFragment extends PreferenceFragment {
+    public static int getColor(Context context, @ColorRes int id, @Nullable Resources.Theme theme) {
+        int color;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.activity_settings);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            color = context.getResources().getColor(id, theme);
+        } else {
+            color = context.getResources().getColor(id);
+        }
+        return color;
     }
 }

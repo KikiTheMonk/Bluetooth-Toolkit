@@ -37,7 +37,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.kyriakosalexandrou.bluetoothtoolkit.R;
-import com.kyriakosalexandrou.bluetoothtoolkit.UtilHelper;
+import com.kyriakosalexandrou.bluetoothtoolkit.helpers.UtilHelper;
 
 /**
  * Created by Kyriakos on 13/12/2015.

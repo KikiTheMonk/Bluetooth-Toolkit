@@ -22,20 +22,29 @@
  * SOFTWARE.
  */
 
-package com.kyriakosalexandrou.bluetoothtoolkit.ui.fragments;
+package com.kyriakosalexandrou.bluetoothtoolkit.managers;
 
-import android.os.Bundle;
-import android.preference.PreferenceFragment;
+import com.kyriakosalexandrou.bluetoothtoolkit.managers.BtcBaseDeviceManager;
 
-import com.kyriakosalexandrou.bluetoothtoolkit.R;
+public interface BtcBaseDeviceManagerUiCallback {
+    /**
+     * called when the device is initialised
+     */
+    void onUiDeviceManagerInitialised(BtcBaseDeviceManager btcBaseDeviceManager);
 
-public class SettingsFragment extends PreferenceFragment {
+    /**
+     * called when the BT classic device gets connected
+     */
+    void onUiBtcRemoteDeviceConnected();
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    /**
+     * called when the BT classic device gets disconnected
+     */
+    void onUiBtcRemoteDeviceDisconnected();
 
-        // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.activity_settings);
-    }
+    /**
+     * Callback indicating that connection to the remote BT Classic device has
+     * failed
+     */
+    void onUiBtcConnectFailed();
 }

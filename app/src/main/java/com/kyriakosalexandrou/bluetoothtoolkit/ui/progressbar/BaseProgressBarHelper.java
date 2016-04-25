@@ -33,7 +33,7 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
 import com.kyriakosalexandrou.bluetoothtoolkit.R;
-import com.kyriakosalexandrou.bluetoothtoolkit.UtilHelper;
+import com.kyriakosalexandrou.bluetoothtoolkit.helpers.UtilHelper;
 
 /**
  * Created by Kyriakos on 18/12/2015.

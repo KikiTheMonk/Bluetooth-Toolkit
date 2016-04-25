@@ -36,14 +36,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.kyriakosalexandrou.bluetoothtoolkit.R;
-import com.kyriakosalexandrou.bluetoothtoolkit.UtilHelper;
-import com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.bloodpressuremeasurement.BpmDeviceActivity;
-import com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.bloodpressuremeasurement.BpmDeviceMultipleDevicesActivity;
-import com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.healththermometermeasurement.HtmDeviceActivity;
-import com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.healththermometermeasurement.HtmDeviceMultipleDevicesActivity;
-import com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.heartratemeasurement.HrmDeviceActivity;
-import com.kyriakosalexandrou.bluetoothtoolkit.bt.ble.heartratemeasurement.HrmDeviceMultipleDevicesActivity;
-import com.kyriakosalexandrou.bluetoothtoolkit.bt.classic.spp.SppActivity;
+import com.kyriakosalexandrou.bluetoothtoolkit.helpers.UtilHelper;
+import com.kyriakosalexandrou.bluetoothtoolkit.ui.activities.BpmDeviceActivity;
+import com.kyriakosalexandrou.bluetoothtoolkit.ui.activities.BpmMultipleDevicesActivity;
+import com.kyriakosalexandrou.bluetoothtoolkit.ui.activities.HtmDeviceActivity;
+import com.kyriakosalexandrou.bluetoothtoolkit.ui.activities.HtmMultipleDevicesActivity;
+import com.kyriakosalexandrou.bluetoothtoolkit.ui.activities.HrmDeviceActivity;
+import com.kyriakosalexandrou.bluetoothtoolkit.ui.activities.HrmMultipleDevicesActivity;
+import com.kyriakosalexandrou.bluetoothtoolkit.ui.activities.SppActivity;
 import com.kyriakosalexandrou.bluetoothtoolkit.models.BtHomeScreenFunctionality;
 
 import java.util.List;
@@ -148,16 +148,16 @@ public class HomeIconsAdapter extends BaseAdapter {
 
             switch (btHomeScreenFunctionality.getBtFunctionalityType()) {
                 case BPM:
-                    intent = new Intent(mContext, BpmDeviceMultipleDevicesActivity.class);
+                    intent = new Intent(mContext, BpmMultipleDevicesActivity.class);
                     mContext.startActivity(intent);
                     break;
 
                 case HRM:
-                    intent = new Intent(mContext, HrmDeviceMultipleDevicesActivity.class);
+                    intent = new Intent(mContext, HrmMultipleDevicesActivity.class);
                     mContext.startActivity(intent);
                     break;
                 case HTM:
-                    intent = new Intent(mContext, HtmDeviceMultipleDevicesActivity.class);
+                    intent = new Intent(mContext, HtmMultipleDevicesActivity.class);
                     mContext.startActivity(intent);
                     break;
                 case SPP:

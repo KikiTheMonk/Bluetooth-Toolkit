@@ -22,20 +22,11 @@
  * SOFTWARE.
  */
 
-package com.kyriakosalexandrou.bluetoothtoolkit.ui.fragments;
+package com.kyriakosalexandrou.bluetoothtoolkit.managers;
 
-import android.os.Bundle;
-import android.preference.PreferenceFragment;
-
-import com.kyriakosalexandrou.bluetoothtoolkit.R;
-
-public class SettingsFragment extends PreferenceFragment {
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.activity_settings);
-    }
+public interface SPPManagerUiCallback {
+    /**
+     * called when data is received from the remote BT classic device
+     */
+    void onUiRemoteDeviceRead(String result);
 }

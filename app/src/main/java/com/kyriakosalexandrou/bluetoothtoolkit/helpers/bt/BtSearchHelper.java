@@ -22,20 +22,28 @@
  * SOFTWARE.
  */
 
-package com.kyriakosalexandrou.bluetoothtoolkit.ui.fragments;
+package com.kyriakosalexandrou.bluetoothtoolkit.helpers.bt;
 
-import android.os.Bundle;
-import android.preference.PreferenceFragment;
+import android.bluetooth.BluetoothAdapter;
 
-import com.kyriakosalexandrou.bluetoothtoolkit.R;
+public abstract class BtSearchHelper {
+    /**
+     * This is used for BLE and BT Classic scanning operation.
+     * The BT Classic API already has methods to check if a discovery
+     * (a BT classic search operation) is in process BUT it seems that it does not immediately
+     * get set to true. It gets set to true ONLY after the BroadcastReceiver receives the action
+     * {@link BluetoothAdapter#ACTION_DISCOVERY_STARTED} and this seems to be a problem as it
+     * doesn't happen immediately
+     */
+    protected boolean mIsScanning = false;
 
-public class SettingsFragment extends PreferenceFragment {
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.activity_settings);
+    /**
+     * Checks if currently a scanning operation is running
+     *
+     * @return true if scanning, otherwise false
+     */
+    public boolean isScanning() {
+        return mIsScanning;
     }
+
 }
