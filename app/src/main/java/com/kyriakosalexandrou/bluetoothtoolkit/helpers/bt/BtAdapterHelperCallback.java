@@ -22,20 +22,13 @@
  * SOFTWARE.
  */
 
-package com.kyriakosalexandrou.bluetoothtoolkit.ui.fragments;
+package com.kyriakosalexandrou.bluetoothtoolkit.helpers.bt;
 
-import android.os.Bundle;
-import android.preference.PreferenceFragment;
+import com.kyriakosalexandrou.bluetoothtoolkit.helpers.bt.bleSearch.BleSearchHelperCallback;
+import com.kyriakosalexandrou.bluetoothtoolkit.helpers.bt.btcSearch.BtcSearchHelperCallback;
 
-import com.kyriakosalexandrou.bluetoothtoolkit.R;
-
-public class SettingsFragment extends PreferenceFragment {
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.activity_settings);
-    }
+/**
+ * Callback's for BT classic and BLE search operations
+ */
+public interface BtAdapterHelperCallback extends BtcSearchHelperCallback, BleSearchHelperCallback {
 }

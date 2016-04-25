@@ -30,8 +30,7 @@ import android.widget.GridView;
 
 import com.kyriakosalexandrou.bluetoothtoolkit.R;
 import com.kyriakosalexandrou.bluetoothtoolkit.adapters.HomeIconsAdapter;
-import com.kyriakosalexandrou.bluetoothtoolkit.bt.BtBaseActivity;
-import com.kyriakosalexandrou.bluetoothtoolkit.bt.BtSupportedFunctionalities;
+import com.kyriakosalexandrou.bluetoothtoolkit.ui.components.SupportedBtTechnologiesComponent;
 import com.kyriakosalexandrou.bluetoothtoolkit.models.BtHomeScreenFunctionality;
 
 import java.util.ArrayList;
@@ -40,7 +39,7 @@ import java.util.List;
 public class HomeActivity extends BtBaseActivity {
     private GridView mIconsGrid;
     private List<BtHomeScreenFunctionality> mBtFunctionalities = new ArrayList<>();
-    private BtSupportedFunctionalities mBtSupportedFunctionalities;
+    private SupportedBtTechnologiesComponent mSupportedBtTechnologiesComponent;
     private HomeIconsAdapter mHomeIconsAdapter;
 
     @Override
@@ -53,7 +52,7 @@ public class HomeActivity extends BtBaseActivity {
     @Override
     protected void onEnableBtRequestCallback(boolean isEnabled) {
         if (isEnabled) {
-            mBtSupportedFunctionalities.checkBtSupportedFunctionalities(getBtAdapterHelper().getBtChecker());
+            mSupportedBtTechnologiesComponent.checkBtSupportedFunctionalities(getBtAdapterHelper().getBtChecker());
 
             disableUnsupportedBtFunctionalities(
                     getBtAdapterHelper().getBtChecker().checkBtClassicSupport(),
@@ -96,14 +95,14 @@ public class HomeActivity extends BtBaseActivity {
     @Override
     public void bindViews() {
         super.bindViews();
-        mBtSupportedFunctionalities = (BtSupportedFunctionalities) findViewById(R.id.bt_supported_functionalities);
+        mSupportedBtTechnologiesComponent = (SupportedBtTechnologiesComponent) findViewById(R.id.bt_supported_functionalities);
         mIconsGrid = (GridView) findViewById(R.id.grid);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        mBtSupportedFunctionalities.checkBtSupportedFunctionalities(getBtAdapterHelper().getBtChecker());
+        mSupportedBtTechnologiesComponent.checkBtSupportedFunctionalities(getBtAdapterHelper().getBtChecker());
     }
 
     @Override

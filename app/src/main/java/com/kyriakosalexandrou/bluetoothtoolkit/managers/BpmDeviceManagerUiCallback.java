@@ -22,20 +22,14 @@
  * SOFTWARE.
  */
 
-package com.kyriakosalexandrou.bluetoothtoolkit.ui.fragments;
+package com.kyriakosalexandrou.bluetoothtoolkit.managers;
 
-import android.os.Bundle;
-import android.preference.PreferenceFragment;
+public interface BpmDeviceManagerUiCallback {
+    void onUiBpmFound(boolean isFound);
 
-import com.kyriakosalexandrou.bluetoothtoolkit.R;
+    void onUIBloodPressureRead(final float valueSystolic,
+                                      final float valueDiastolic,
+                                      final float valueArterialPressure
+    );
 
-public class SettingsFragment extends PreferenceFragment {
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.activity_settings);
-    }
 }

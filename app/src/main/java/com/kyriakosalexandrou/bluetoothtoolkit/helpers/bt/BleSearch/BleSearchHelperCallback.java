@@ -22,20 +22,33 @@
  * SOFTWARE.
  */
 
-package com.kyriakosalexandrou.bluetoothtoolkit.ui.fragments;
+package com.kyriakosalexandrou.bluetoothtoolkit.helpers.bt.bleSearch;
 
-import android.os.Bundle;
-import android.preference.PreferenceFragment;
+import android.bluetooth.BluetoothDevice;
 
-import com.kyriakosalexandrou.bluetoothtoolkit.R;
+import java.util.UUID;
 
-public class SettingsFragment extends PreferenceFragment {
+/**
+ * Callback's for BLE search operations.
+ */
+public interface BleSearchHelperCallback {
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    void onBleStopScan();
 
-        // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.activity_settings);
-    }
+    /**
+     * Callback reporting a BLE device found during a scan that was initiated by one of the following
+     * <br>
+     * {@link BleBaseSearchHelper#startScan()}<br>
+     * {@link BleBaseSearchHelper#startScan(UUID[])}<br>
+     * {@link BleBaseSearchHelper#startBleScanPeriodically()}<br>
+     * {@link BleBaseSearchHelper#startBleScanPeriodically(UUID[])}
+     *
+     * @param device     Identifies the remote device
+     * @param rssi       The RSSI value for the remote device as reported by the
+     *                   Bluetooth hardware. 0 if no RSSI value is available.
+     * @param scanRecord The content of the advertisement record offered by the remote
+     *                   device.
+     */
+    void onBleDeviceFound(final BluetoothDevice device, final int rssi,
+                          final byte[] scanRecord);
 }

@@ -37,10 +37,10 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.kyriakosalexandrou.bluetoothtoolkit.ApiWrapper;
+import com.kyriakosalexandrou.bluetoothtoolkit.helpers.ApiWrapper;
 import com.kyriakosalexandrou.bluetoothtoolkit.R;
-import com.kyriakosalexandrou.bluetoothtoolkit.UtilHelper;
-import com.kyriakosalexandrou.bluetoothtoolkit.bt.BtAdapterHelper;
+import com.kyriakosalexandrou.bluetoothtoolkit.helpers.UtilHelper;
+import com.kyriakosalexandrou.bluetoothtoolkit.helpers.bt.BtAdapterHelper;
 
 /**
  * a custom header component

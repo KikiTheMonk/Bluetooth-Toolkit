@@ -27,7 +27,7 @@
     style="@style/ScreenContainer">
 
     <include
-        layout="@layout/device_spp"
+        layout="@layout/item_device_spp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/btn_scan" />

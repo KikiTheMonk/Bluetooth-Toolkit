@@ -22,20 +22,25 @@
  * SOFTWARE.
  */
 
-package com.kyriakosalexandrou.bluetoothtoolkit.ui.fragments;
+package com.kyriakosalexandrou.bluetoothtoolkit.managers;
 
-import android.os.Bundle;
-import android.preference.PreferenceFragment;
+public interface HrmDeviceManagerUiCallback {
 
-import com.kyriakosalexandrou.bluetoothtoolkit.R;
+    void onUiHrmFound(boolean isFound);
 
-public class SettingsFragment extends PreferenceFragment {
+    /**
+     * gets called whenever the heart rate measurement changes from the remote
+     * BLE device
+     *
+     * @param hrmValue the new heart rate measurement value
+     */
+    void onUiHRM(final int hrmValue);
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.activity_settings);
-    }
+    /**
+     * called when the body sensor location characteristic is read with its
+     * current body sensor location value
+     *
+     * @param bodySensorLocationValue the current body sensor location value
+     */
+    void onUiBodySensorLocation(final int bodySensorLocationValue);
 }

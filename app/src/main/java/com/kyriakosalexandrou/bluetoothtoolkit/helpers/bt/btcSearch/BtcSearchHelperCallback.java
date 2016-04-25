@@ -22,20 +22,26 @@
  * SOFTWARE.
  */
 
-package com.kyriakosalexandrou.bluetoothtoolkit.ui.fragments;
+package com.kyriakosalexandrou.bluetoothtoolkit.helpers.bt.btcSearch;
 
-import android.os.Bundle;
-import android.preference.PreferenceFragment;
+import android.bluetooth.BluetoothDevice;
 
-import com.kyriakosalexandrou.bluetoothtoolkit.R;
+/**
+ * Callback's for BT classic search operations.
+ */
+public interface BtcSearchHelperCallback {
 
-public class SettingsFragment extends PreferenceFragment {
+    /**
+     * callback indicating that a BT classic scanning operation stopped
+     */
+    void onDiscoveryStop();
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.activity_settings);
-    }
+    /**
+     * Called when a BT classic device was found during a scan.
+     *
+     * @param device The BT device
+     * @param rssi   The RSSI value for the remote device as reported by the
+     *               Bluetooth hardware. 0 if no RSSI value is available.
+     */
+    void onDiscoveryDeviceFound(final BluetoothDevice device,final int rssi);
 }

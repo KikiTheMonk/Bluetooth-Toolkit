@@ -22,20 +22,21 @@
  * SOFTWARE.
  */
 
-package com.kyriakosalexandrou.bluetoothtoolkit.ui.fragments;
+package com.kyriakosalexandrou.bluetoothtoolkit.managers;
 
-import android.os.Bundle;
-import android.preference.PreferenceFragment;
+public interface BleBaseDeviceManagerUiCallback {
 
-import com.kyriakosalexandrou.bluetoothtoolkit.R;
+    void onUiDeviceManagerInitialised(BleBaseDeviceManager bleBaseDeviceManager);
 
-public class SettingsFragment extends PreferenceFragment {
+    void onUiConnected();
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    void onUiConnecting();
 
-        // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.activity_settings);
-    }
+    void onUiDisconnected(final int status);
+
+    void onUiDisconnecting();
+
+    void onUiBatteryRead(final int valueBattery);
+
+    void onUiReadRemoteRssi(final int valueRSSI);
 }
